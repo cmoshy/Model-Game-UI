@@ -1,3 +1,17 @@
+html, body {
+    height: 100%;
+    background-color:#FACADE;
+    margin: 0;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
 div {
     user-select: none;
 }
