@@ -1,0 +1,154 @@
+div {
+    user-select: none;
+}
+
+/* Apply styles to each list item */
+li {
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide any overflow text */
+    border: 2px solid transparent;
+    margin-top: 1vh;
+    user-select: none;
+}
+
+/* Apply styles on hover */
+li:hover {
+    white-space: normal;
+    /* Allow text to wrap when hovered */
+    overflow: visible;
+    /* Reveal overflow text */
+    text-overflow: clip;
+    /* Clip text instead of displaying ellipsis */
+    border: 2px solid aliceblue;
+}
+
+.button {
+    color: whitesmoke;
+}
+
+.button:hover {
+    color: red;
+    font-size: 1.1em; /* Increase font size by 10% */
+}
+
+
+.popup {
+    display: none;
+    /* Hide popup by default */
+    position: fixed;
+    /* Position the popup relative to the viewport */
+    background-color: #fefefe;
+    /* Popup background color */
+    border: 1px solid #ccc;
+    /* Popup border */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+    z-index: 999;
+    /* Ensure popup appears on top of other elements */
+    background-color: rgb(21, 21, 38);
+}
+
+.popup-content {
+    padding: 29px;
+    /* Add padding inside the popup */
+}
+
+.close {
+    position: absolute;
+    /* Position close button relative to the popup */
+    top: 10px;
+    /* Set top position */
+    right: 10px;
+    /* Set right position */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+
+    color: whitesmoke;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    text-decoration: underline;
+    height: 30px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    height: 30px;
+    white-space: nowrap;
+    font-weight: bold; /* Makes the text bold */
+    color: rgb(166, 113, 0);
+    position: relative; /* Required for ::before positioning */
+    transition: color 0.3s, font-size 0.3s; /* Smooth transition for text color and size */
+}
+
+.button:hover {
+    color:white;
+    font-size: 1.1em; /* Increase font size by 10% */
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(46, 19, 94);
+    width: 100%;
+    background-color: rgb(21, 21, 38); /* Add the blue background */
+}
+
+.content-section {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgb(42, 165, 81);
+    width: 100%;
+    background-color: rgb(21, 21, 38); /* Add the blue background */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
